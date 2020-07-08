@@ -586,8 +586,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791368472}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
-=======
 --- !u!1001 &1875054898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -894,7 +892,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1918046328}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Back-End
 --- !u!1 &1938713846
 GameObject:
   m_ObjectHideFlags: 0

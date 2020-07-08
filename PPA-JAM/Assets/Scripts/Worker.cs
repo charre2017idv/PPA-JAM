@@ -50,12 +50,12 @@ public class Worker : MonoBehaviour
 
     }
 
-<<<<<<< HEAD:PPA-JAM/Assets/Scripts/Worker.cs
+//<<<<<<< HEAD:PPA-JAM/Assets/Scripts/Worker.cs
   public Worker()
   {
 
   }
-=======
+//=======
     void walk()
     {
         m_isWalking = true;
@@ -86,5 +86,5 @@ public class Worker : MonoBehaviour
     }
 
 
->>>>>>> Back-End:PPA-JAM/Assets/Scripts/Engine/Worker.cs
+//>>>>>>> Back-End:PPA-JAM/Assets/Scripts/Engine/Worker.cs
 }
