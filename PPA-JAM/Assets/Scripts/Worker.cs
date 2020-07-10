@@ -25,7 +25,7 @@ public class Worker : MonoBehaviour {
     void Start()
     {
         Rect = gameObject.GetComponent<RectTransform>();
-        m_name = "Chucho";
+        
         posX = Rect.position.x;
         limits += posX;
         m_isWalking = false;
@@ -51,7 +51,8 @@ public class Worker : MonoBehaviour {
 
 
     public Worker() {
-
+        m_name = "Chucho";
+        
     }
 
     void walk() {
