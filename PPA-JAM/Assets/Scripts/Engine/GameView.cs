@@ -13,9 +13,11 @@ public class GameView : MonoBehaviour
   public GameObject WorkStationPref;
   public GameObject OfficePref;
   public GameObject WorkerPref;
+  public GameObject StatsPanel;
 
   public List<GameObject> WorkstationList;
   public List<GameObject> OfficeList;
+  
 
   // Start is called before the first frame update
   void Start()
@@ -41,10 +43,22 @@ public class GameView : MonoBehaviour
       GameObject a = (GameObject)Instantiate(WorkStationPref);
       WorkstationList.Add(a);
       a.name = "Workstation "+ i;
-     a.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = workstation[i].workstation_name;
+      a.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = workstation[i].workstation_name;
 			a.transform.SetParent(Corporation.transform, false);
       Controller.model.hasChange = true;
 		}
       Controller.model.hasChange = false;
+  }
+
+  public void setInfo(Office office)
+  {
+        StatsPanel.SetActive(true);
+        StatsPanel.transform.GetChild(0).GetComponent<Text>().text = office.workers[0].m_name;
+        //StatsPanel.transform.GetChild(1).GetComponent<Text>().text = office.workers[0].m_Emotion.getBasicEmotions().ToString();
+        StatsPanel.transform.GetChild(1).GetComponent<Text>().text = "Happy";
+        //StatsPanel.transform.GetChild(2).GetComponent<Text>().text = office.workers[0].m_job.ToString();
+        StatsPanel.transform.GetChild(2).GetComponent<Text>().text = "Creative";
+        //StatsPanel.transform.GetChild(3).GetComponent<Text>().text = "$" + office.workers[0].m_salary.ToString();
+        StatsPanel.transform.GetChild(3).GetComponent<Text>().text = "$1,000";
   }
 }

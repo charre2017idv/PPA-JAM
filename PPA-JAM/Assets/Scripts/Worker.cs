@@ -9,12 +9,11 @@ public enum Job { };
 public enum Salary { };
 
 
-public class Worker : MonoBehaviour
-{
-
-    private Emotion m_Emotion;
-    private Job m_job;
-    private Salary m_salary;
+public class Worker : MonoBehaviour {
+    public string m_name;
+    public Emotion m_Emotion;
+    public Job m_job;
+    public Salary m_salary;
     private bool m_isWalking;
     //public GameObject ownWorker;
     private float limits = 74;
@@ -26,7 +25,7 @@ public class Worker : MonoBehaviour
     void Start()
     {
         Rect = gameObject.GetComponent<RectTransform>();
-
+        m_name = "Chucho";
         posX = Rect.position.x;
         limits += posX;
         m_isWalking = false;
@@ -50,14 +49,12 @@ public class Worker : MonoBehaviour
 
     }
 
-//<<<<<<< HEAD:PPA-JAM/Assets/Scripts/Worker.cs
-  public Worker()
-  {
 
-  }
-//=======
-    void walk()
-    {
+    public Worker() {
+
+    }
+
+    void walk() {
         m_isWalking = true;
         
         Debug.Log(posX);
@@ -85,6 +82,11 @@ public class Worker : MonoBehaviour
         m_isWalking = false;
     }
 
+    void getInfo(GameObject inUIPanel) {
+        
+       // m_Emotion
+       // m_job
+       // m_salary
+    }
 
-//>>>>>>> Back-End:PPA-JAM/Assets/Scripts/Engine/Worker.cs
 }

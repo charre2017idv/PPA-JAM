@@ -52,7 +52,8 @@ public class Emotion : MonoBehaviour {
     }
 
     public basicEmotions getBasicEmotions() {
-        return m_BasicEmotions;
+        return basicEmotions.Happy;
+        //return m_BasicEmotions;
     }
     
     public complexEmotions getComplexEmotions() {
