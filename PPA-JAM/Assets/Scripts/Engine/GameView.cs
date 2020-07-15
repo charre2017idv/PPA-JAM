@@ -45,9 +45,17 @@ public class GameView : MonoBehaviour
       a.name = "Workstation "+ i;
       a.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = workstation[i].workstation_name;
 			a.transform.SetParent(Corporation.transform, false);
+      var offices = Controller.corporation.workStations[i].offices;
+      for (int j = 0; j < offices.Count; j++)
+      {
+        GameObject tmpOffice = (GameObject)Instantiate(OfficePref);
+        tmpOffice.GetComponent<Button>().onClick.AddListener(() => setInfo(offices[0]));
+        tmpOffice.transform.SetParent(a.transform, false);
+      }
       Controller.model.hasChange = true;
 		}
-      Controller.model.hasChange = false;
+    Controller.model.hasChange = false;
+
   }
 
   public void setInfo(Office office)

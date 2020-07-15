@@ -28,8 +28,7 @@ public class GameModel : MonoBehaviour
     }
 
     _controller.corporation.workStations[0].AddOffice();
-    _controller.corporation.workStations[0].offices[0].AddWorker();
-
+    _controller.corporation.workStations[0].offices[0].AddWorker("Profe Hector");
     WorkersList.Add(_controller.corporation.workStations[0].offices[0].workers[0]);
     
     hasChange = true;

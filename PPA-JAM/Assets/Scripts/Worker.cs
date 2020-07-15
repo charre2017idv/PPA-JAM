@@ -50,8 +50,8 @@ public class Worker : MonoBehaviour {
     }
 
 
-    public Worker() {
-        m_name = "Chucho";
+    public Worker(string name) {
+        m_name = name;
         
     }
 

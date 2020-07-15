@@ -10,9 +10,9 @@ public class Office : MonoBehaviour
   {
 
   }
-  public void AddWorker()
+  public void AddWorker(string name)
   {
-    Worker tmpWorker = new Worker();
+    Worker tmpWorker = new Worker(name);
     workers.Add(tmpWorker);
   }
 
